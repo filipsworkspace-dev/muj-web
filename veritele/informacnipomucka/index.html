@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="cs" data-theme="light">
+<head>
+  <!-- Statická verze pro GitHub Pages / vlastní doménu -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seznam nebankovních věřitelů</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <main class="page">
+    <div class="container">
+      <nav class="topnav" aria-label="Navigace stránky">
+        <div class="nav-links">
+          <a class="nav-link" href="#prehled">Přehled věřitelů</a>
+          <a class="nav-link" href="#vyhledavani">Vyhledávání</a>
+          <a class="nav-link" href="#vysledky">Seznam</a>
+        </div>
+      </nav>
+
+      <section class="hero" id="prehled">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Informační pomůcka pro klienty
+          </div>
+
+          <h1>
+            Přehled názvů <span class="headline-accent">nebankovních věřitelů</span>
+          </h1>
+
+          <p class="lead">
+            Z praxe víme, že mnoho klientů si nepamatuje názvy všech věřitelů.
+            Firmy navíc často mění svá jména nebo používají více obchodních značek, což situaci komplikuje.
+            Tento seznam Vám pomůže vzpomenout si, u které společnosti máte nebo jste v minulosti měli úvěr.
+          </p>
+
+          <div class="usage-note">
+            <div class="usage-icon">⧉</div>
+            <p>
+              <strong>Jak kopírování funguje:</strong>
+              klikněte na hlavní název věřitele, obchodní značku, IČO nebo adresu.
+              Hodnota se automaticky zkopíruje a můžete ji vložit do poznámky, e-mailu nebo tabulky.
+            </p>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Jak seznam používat">
+          <h2>Jak seznam používat</h2>
+          <p>Stačí hledat název, který si pamatujete. Výsledky se filtrují podle názvu, obchodní značky, IČO i adresy.</p>
+
+          <div class="mini-steps">
+            <div class="mini-step">
+              <div class="mini-step-number">1</div>
+              <div>
+                <strong>Najděte věřitele</strong>
+                <span>Zadejte část názvu, značky, IČO nebo adresy.</span>
+              </div>
+            </div>
+            <div class="mini-step">
+              <div class="mini-step-number">2</div>
+              <div>
+                <strong>Kliknutím zkopírujte</strong>
+                <span>Kopírovat lze název, obchodní značku, IČO i adresu.</span>
+              </div>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section class="panel search-panel" id="vyhledavani">
+        <div class="panel-top">
+          <div class="panel-title">
+            <h2>Vyhledávání věřitele</h2>
+            <p>
+              Zadejte název věřitele nebo obchodní značku, kterou si pamatujete.
+              Seznam zůstává zobrazený a při psaní se pouze filtruje.
+            </p>
+          </div>
+
+          <div class="counter" id="status">Načítám data…</div>
+        </div>
+
+        <div class="search-box">
+          <span class="search-icon" aria-hidden="true">🔎</span>
+          <input id="searchInput" type="search" placeholder="Např. Ferratum, FlexiFin, Kamali, Zaplo…" autocomplete="off">
+        </div>
+
+        <div class="chips-wrap" id="chipsWrap">
+          <div class="chips-title">Nejčastěji hledané názvy</div>
+          <div class="chips" id="chips"></div>
+        </div>
+
+        <div class="hint-row">
+          <span><strong>Tip:</strong> I když si nejste jistí přesným názvem, zkuste zadat jen část slova.</span>
+          <span>Název, obchodní značku, IČO i adresu zkopírujete jednoduchým kliknutím.</span>
+        </div>
+      </section>
+
+      <section class="panel results-panel" id="vysledky">
+        <div class="empty" id="empty">
+          <strong>Nic nenalezeno</strong>
+          Zkuste zadat kratší část názvu, IČO, adresu nebo jinou obchodní značku, kterou si pamatujete.
+        </div>
+
+        <div class="results-grid" id="results"></div>
+      </section>
+
+      <section class="notice">
+        <div class="notice-icon">i</div>
+        <p>
+          <strong>Důležité upozornění:</strong>
+          Tento přehled nemusí obsahovat veškeré názvy nebankovních věřitelů.
+          Seznam se může průběžně doplňovat a rozšiřovat.
+        </p>
+      </section>
+
+      <div class="dev-footer">
+        Developed by beefmaker © 2026
+      </div>
+    </div>
+  </main>
+
+  <div class="copy-toast" id="copyToast" role="status" aria-live="polite">Zkopírováno</div>
+  <script src="js/app.js"></script>
+</body>
+</html>
